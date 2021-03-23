@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+    <meta name="keywords" content="Turismo, viaje, tour, descubrir">
+    <meta name="description" content="Travel advice es un sitio web con recomendaciones sobre viajes"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/proyectofinal.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>Travel Advice</title>
+</head>
+
+<body>
+    <div class="generalGrid">
+        <header class="header">
+            <nav class="menu">
+                <a href="index.html" class="logo animate__animated animate__bounce"><i class="fas fa-map-marker-alt animate__animated animate__bounce"></i> Travel Advice</a>
+                <div class="hide">
+                    <ul>
+                        <li><a href="about.html">Nosotros</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                        <li><a href="https://www.instagram.com/_travel.advice_/"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            <h1>¿A dónde te gustaría ir?</h1>
+            <div>
+                <ul>
+                    <li class="image"><img src="img/america.png" alt="america continent" width="130" height="130" class="image__img ">
+                        <div class="image__overlay">
+                            <div class="image__title"><a href="america.html">América</a></div>
+                        </div>
+                    </li>
+                    <li class=image><img src="img/europe.PNG" alt="europe continent" width="130" height="130" class="image__img">
+                        <div class="image__overlay">
+                            <div class="image__title"><a href="europe.html">Europa</a></div>
+                        </div>
+                    </li>
+                    <li class="image"><img src="img/asia.PNG" alt="asia continent" width="130" height="130" class="image__img">
+                        <div class="image__overlay">
+                            <div class="image__title"><a href="asia.html">Asia</a></div>
+                        </div>
+                    </li>
+                    <li class="image"><img src="img/oceania.PNG" alt="oceania continent" width="130" height="130" class="image__img">
+                        <div class="image__overlay">
+                            <div class="image__title"><a href="oceania.html">Oceanía</a></div>
+                        </div>
+                    </li>
+                    <li class="image"><img src="img/africa.png" alt="africa continent" width="130" height="130" class="image__img">
+                        <div class="image__overlay">
+                            <div class="image__title"><a href="africa.html">Africa</a></div>
+                        </div>
+                    </li>
+                </ul>
+            </div> 
+        </main>
+
+        <section class="section">
+            <div>
+                <h1>¿Aún no lo sabes? Te ayudamos!</h1>
+                <h2>Solamente responde
+                    <div class="underline">
+                        <a href="help.html">estas preguntas</a>
+                    </div>
+                </h2>
+            </div>
+            <h2>ó inspírate con la sección</h2>
+            <div class="rank">
+                <button type="button" class="btn btn-danger my-4" data-toggle="modal" data-target="#exampleModal">Países más visitados del mundo</button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">¿Querés adivinar?</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <div class="modal-body pop">
+                                Pista: en el top 5, 3 países son de Europa, 1 de Asia y 1 de América</div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-danger"><a href="ranking.html" class="noDeco">A ver si adivinaste...</a></button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+        <footer class="footer my-5">
+            <div class="piece">
+                <ul>
+                    <li><a href="about.html">Nosotros</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="https://www.instagram.com/_travel.advice_/"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    
+        <!-- SCRIPTS -->
+        <!-- Boootstrap 4.6 -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+</body>
+
+</html>

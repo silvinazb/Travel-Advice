@@ -1,0 +1,874 @@
+/* ESTILOS GENERALES */
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../img/planeComp.jpg);
+    background-size: cover;
+    font-style: normal;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* ESTILOS INDEX */
+
+.generalGrid{
+    display: grid;
+    grid-template-rows: 10% 35% 35% 20%;
+    grid-template-areas:
+    "encabezado"
+    "principal"
+    "seccion"
+    "pie"
+    ;
+}
+.header { grid-area: encabezado;}
+
+.main   { grid-area: principal;}
+
+.section { grid-area: seccion;}
+
+.footer { grid-area: pie;}
+
+/* Index - Header */
+
+.header{
+    background-color: #dc3545;
+}
+.menu a{
+    float: left;
+    text-decoration: none;
+    color: white;
+}
+.menu a:hover{
+    text-shadow: 0 0 3px white;
+}
+.logo{
+    font-size: 1.8rem;
+    margin: 1rem 1rem 1rem 2.5rem;
+    font-weight: bold;
+}
+.hide{
+    float: right;
+}
+.hide ul{
+    list-style: none;
+    margin-top: 1rem;
+}
+.hide li{
+    display: inline;
+    padding: 0.3rem;
+}
+.hide a{
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+.hide a:hover{
+    text-shadow: 0 0 3px white;
+}
+
+/* Index - Main */
+
+.main{
+    text-align: center;
+}
+.main h1{
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+    padding: 2rem;
+    font-weight: bold;
+}
+.main li{
+    display: flex;
+    display: inline-block;
+}
+.main a {
+    text-decoration: none;
+    color: white;
+}
+.main img{
+    border-radius: 50%;
+    text-decoration: none;
+}
+.image{ 
+    position: relative;
+    animation-duration: 5s;
+    animation-name: aparecer;
+}
+@keyframes aparecer {
+    0% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 1;
+    }
+}
+.image__img{
+    display: block;
+}
+.image__overlay{
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#dc3545e6;
+    color: black;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+.image__overlay:hover{
+    opacity: 1;
+}
+.image__title{
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* Index - Section */
+
+.section{
+    padding: 3rem;
+}
+.section h1{
+    font-size: 1.4rem;
+    text-align: center;
+    color: black;
+    margin-top: 1.2rem;
+    font-weight: bold;
+}
+.section h2{
+    font-size: 1.4rem;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+.section a{
+    color: black;
+    margin-left: 0.5rem;
+}
+.underline{
+    text-decoration: underline;
+}
+.section h2 a:hover{
+    color: #dc3545;
+}
+.section .noDeco{
+    text-decoration: none;
+    color: white;
+}
+.rank{
+    display: flex;
+    justify-content: center;
+}
+.rank h5, .pop{
+    color: black;
+    font-weight: bold;
+}
+
+/* Index - Footer - No aparece para pantallas grandes. Ver Media Queries */
+
+/* ESTILO DE HEADER PARA TODAS LAS SECCIONES MENOS INDEX  */
+
+.sticky{
+    position: fixed;
+    top: 0%;
+    width:100%;
+}
+.navbar-brand{
+    font-size: 1.8rem;
+    margin-left: 2.5rem;
+    font-weight: bold;
+}
+.logo2:hover{
+    text-shadow: 0 0 3px white;
+}
+.countries a:hover {
+    text-shadow: 0 0 3px white;
+}
+
+/* ESTILO DE FOOTER PARA TODAS LAS SECCIONES MENOS INDEX  */
+
+.footer2{
+    background-color: rgba(253, 253, 253, 0.3);
+}
+.end{
+    position: fixed;
+    top: 40%;
+    right: 0%;
+    width: 9rem;
+    display: flex;
+    flex-direction: column;
+}
+.end a{
+    text-decoration: none;
+    padding: 0.5rem;
+    margin: 0.1rem;
+    text-align: left;
+    border-radius: 2rem 0rem 0rem 2rem;
+    transform: translate(5.5rem, 0rem);
+    transition: all 0.5s;
+}
+.end a:hover{
+    transform: translate(0rem, 0rem);
+    text-decoration: none;
+    color: white;
+
+}
+.end a i{
+    margin-right: 0.5rem;
+    background-color: white;
+    height: 2.5rem;
+    width: 2.5rem ;
+    color: black;
+    text-align: center;
+    line-height: 2.5rem;
+    border-radius: 50%;
+}
+.end a i.fa-instagram{
+    color: #dc3545;
+}
+.end a i.fa-envelope{
+    color: #dc3545cc;
+}
+.end a i.fa-question-circle{
+    color: #dc354573;
+}
+.end a i.fa-users{
+    color: #dc3545cc;
+}
+.insta{
+    background-color: #dc3545;
+    color: white;
+    font-weight: bold;
+}
+.cont{
+    background-color: #dc3545cc;
+    color: white;
+    font-weight: bold;
+}
+.ayu{
+    background-color: #dc354573;
+    color: white;
+    font-weight: bold;
+}
+.nos{
+    background-color: #dc3545cc;
+    color: white;
+    font-weight: bold;
+}
+
+/* ESTILOS ABOUT US*/
+
+.nosotros{
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    margin-top: 0%;
+    padding-top: 4rem;
+}
+.nosotros h1{
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: black;
+    font-weight: bold;
+    background-color: #dc354580;
+    margin-bottom: 0%;
+}
+.us{
+    background-image: linear-gradient(rgba(255,0,0,0), rgba(255,255,255,0.8));
+    padding-bottom: 2.5rem;
+}
+.us h2{
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    color: black;
+    font-weight: bold;
+}
+.us p{
+    margin-right: 20%;
+    margin-left: 20%;
+}
+#us2{
+    margin-bottom: 0%;
+    padding: 1%;
+}
+.circle{
+    position:relative;
+}
+.circle:before{
+    content:"";
+    z-index:-1;
+    left:-0.5em;
+    top:-0.1em;
+    border-width:2px;
+    border-style:solid;
+    border-color: #dc3545;
+    position:absolute;
+    border-right-color:transparent;
+    width:100%;
+    height:2em;
+    border-radius:50%;
+    padding:0.1em 0.25em;
+}
+.circle:after{
+    content:"";
+    z-index:-1;
+    left:-0.5em;
+    top:1.1em;
+    padding:0.1em 0.25em;
+    border-width:2px;
+    border-style:solid;
+    border-color:#dc3545;
+    border-left-color:transparent;
+    border-top-color:transparent;
+    position:absolute;
+    width:100%;
+    height:1em;
+    transform:rotate(-1deg);
+    border-radius:50%;
+}
+
+/* ESTILOS CONTACT */
+
+.contact{
+    color: black;
+    font-weight: bold;
+    margin-top: 0%;
+    background-image: linear-gradient(rgba(255,0,0,0), rgba(255,255,255,0.7));
+    padding-bottom: 4rem;
+}
+.ubi{
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+.sticky2{
+    position: sticky;
+    z-index: 1;
+    top: 0%;
+    width:100%;
+}
+.contact h1{
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    background-color: #dc354580;
+    margin-bottom: 1%;
+}
+
+/* Estilos HELP */
+
+.ayuda{
+    text-align: center;
+    padding-top: 4rem;
+    color: black;
+    font-weight: bold;
+    margin-top: 0%;
+    background-image: linear-gradient(rgba(255,0,0,0), rgba(255,255,255,0.8));
+    padding-bottom: 1rem;
+}
+.ayuda h1{
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    background-color: #dc354580;
+    margin-bottom: 1%;
+}
+.ubi2{
+    padding-right: 4rem;
+    padding-left: 4rem;
+}
+.nos2{
+    background-color: #dc354573;
+    color: white;
+    font-weight: bold;
+}
+
+/* Estilos RANKING */
+
+.ranking{
+    padding-top: 4rem;
+    text-align: center;
+    padding-bottom: 1rem;
+    margin-top: 0%;
+    background-image: linear-gradient(rgba(255,0,0,0), #ffffff4d);
+
+}
+.ranking h1{
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem;
+    color: black;
+    font-weight: bold;
+    background-color: #dc354580;
+    margin-bottom: 2%;
+}
+.ranking h4{
+    font-size: 1.2rem;
+    text-align: center;
+}
+.ranking h4 a{
+    text-decoration: none;
+    color: #dc3545;
+    font-weight: bold;
+}
+.ranking td a{
+    text-decoration: none;
+    color: black;
+}
+.ranking td a:hover{
+    text-decoration: none;
+    color: #dc3545;
+}
+
+/* Estilos AMERICA */
+
+.america{
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    background-image: linear-gradient(rgba(255,0,0,0), rgba(255,255,255,0.8));
+    padding-top:4rem;
+    margin-top: 0%;
+    position: relative;
+    z-index: -1;
+    padding-bottom: 1rem;
+}
+.america h1{
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    background-color: #dc354580;
+    margin-bottom: 0%;
+    padding-bottom: 1rem;
+}
+.america h4{
+    font-size: 1.4rem;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    padding: 0.3rem;
+    margin-left: 29%;
+    margin-right: 29%;
+    padding-top: 1%;
+}
+.arg{
+    display: flex;
+    justify-content: center;
+    margin-left: 35%;
+    margin-right: 35%;
+    padding: 1rem;
+}
+.arg img{
+    width: 25rem;
+    height: 15rem;
+}
+
+/* Estilos EUROPA */
+
+.europa{
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    background-image: linear-gradient(rgba(255,0,0,0), rgba(255,255,255,0.8));
+    padding-top:4rem;
+    margin-top: 0%;
+    position: relative;
+    z-index: -1;
+    padding-bottom: 1rem;
+
+}
+.europa h1{
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    background-color: #dc354580;
+    margin-bottom: 0%;
+    padding-bottom: 1rem;
+}
+.europa h4{
+    font-size: 1.4rem;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    padding: 0.3rem;
+    margin-left: 29%;
+    margin-right: 29%;
+    padding-top: 1%;
+    background-color: #dc354580;
+    margin-top: 1%;
+}
+.eur{
+    display: flex;
+    justify-content: center;
+    margin-left: 35%;
+    margin-right: 35%;
+    padding: 1rem;
+}
+.eur img{
+    width: 25rem;
+    height: 15rem;
+}
+
+/* Estilos ASIA */
+
+.asia{
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    background-image: linear-gradient(rgba(255,0,0,0), rgba(255,255,255,0.8));
+    padding-top:4rem;
+    margin-top: 0%;
+    position: relative;
+    z-index: -1;
+    padding-bottom: 1rem;
+
+}
+.asia h1{
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    background-color: #dc354580;
+    margin-bottom: 0%;
+    padding-bottom: 1rem;
+}
+.asia h4{
+    font-size: 1.4rem;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    padding: 0.3rem;
+    margin-left: 29%;
+    margin-right: 29%;
+    padding-top: 1%;
+    background-color: #dc354580;
+    margin-top: 1%;
+}
+.asi{
+    display: flex;
+    justify-content: center;
+    margin-left: 35%;
+    margin-right: 35%;
+    padding: 1rem;
+}
+.asi img{
+    width: 25rem;
+    height: 15rem;
+}
+
+
+/* ESTILOS AFRICA */
+
+.africa{
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    background-image: linear-gradient(rgba(255,0,0,0), rgba(255,255,255,0.8));
+    padding-top:4rem;
+    margin-top: 0%;
+    position: relative;
+    z-index: -1;
+    padding-bottom: 1rem;
+
+}
+.africa h1{
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    background-color: #dc354580;
+    margin-bottom: 0%;
+    padding-bottom: 1rem;
+}
+.africa h4{
+    font-size: 1.4rem;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    padding: 0.3rem;
+    margin-left: 29%;
+    margin-right: 29%;
+    padding-top: 1%;
+    background-color: #dc354580;
+    margin-top: 1%;
+}
+.afr{
+    display: flex;
+    justify-content: center;
+    margin-left: 35%;
+    margin-right: 35%;
+    padding: 1rem;
+}
+.afr img{
+    width: 25rem;
+    height: 15rem;
+}
+
+/* ESTILOS OCEANIA */
+
+.oceania{
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    background-image: linear-gradient(rgba(255,0,0,0), rgba(255,255,255,0.8));
+    padding-top:4rem;
+    margin-top: 0%;
+    position: relative;
+    z-index: -1;
+    padding-bottom: 1rem;
+
+}
+.oceania h1{
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    background-color: #dc354580;
+    margin-bottom: 0%;
+    padding-bottom: 1rem;
+}
+.oceania h4{
+    font-size: 1.4rem;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    padding: 0.3rem;
+    margin-left: 29%;
+    margin-right: 29%;
+    padding-top: 1%;
+    background-color: #dc354580;
+    margin-top: 1%;
+}
+.oce{
+    display: flex;
+    justify-content: center;
+    margin-left: 35%;
+    margin-right: 35%;
+    padding: 1rem;
+}
+.oce img{
+    width: 25rem;
+    height: 15rem;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 731px) {
+
+    /* index - Header */
+    .logo{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 1rem;
+        text-align: center;
+        margin: auto;
+    }
+    .hide{
+        display: none;
+    }
+
+    /* index - Main */
+    .main h1{
+        font-size: 1.8rem;
+    }
+    .main .image{ 
+        filter: drop-shadow(0 0 0.75rem white);
+    }
+    .main img {
+    width: 6.5rem;
+    height: 6.5rem;
+    }
+
+    /* index - Footer */
+    .footer{
+        text-align: center;
+    }
+    .piece{
+        border-top: 2px dotted rgba(255, 255, 255, 0.746);
+        display: block;
+    }
+    .piece ul{
+        list-style: none;
+    }
+    .piece li{
+        display: inline;
+    }
+    .piece a{
+        padding: 0.5rem;
+        color: rgba(255, 255, 255, 0.746);
+        text-shadow: 0 0 3px white;
+    }
+
+    /* Header - Secciones*/
+    .navbar-brand{
+        margin:auto;
+        display: block;
+    }
+    .navbar-nav{
+        margin:auto;
+        display: block;
+    }
+    .nav-link{
+        display: block;
+        text-align: center;
+    }
+
+    /* Footer - Secciones */
+    .end{
+        position: fixed;
+        top: 50%;
+    }
+
+    /* About us */
+    .circle::before{
+        display: none;
+    }
+    .circle::after{
+        display: none;
+    }
+
+    /* Contact & Help */
+    .ubi2{
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+
+    /* Ranking */
+    .ranking h1{
+            font-size:1.4rem ;
+        }
+    .ranking h4{
+            font-size:1rem ;
+        }
+
+    /* America */
+    .america h1{
+        font-size: 1.2rem;
+    }
+    .america h4{
+        font-size: 1.1rem;
+    }
+    .info{
+        margin-left: 15%;
+        margin-right: 15%;
+        font-size: 0.85rem;
+    }
+    .info li{
+        list-style: none;
+    }
+
+    /* Europa */
+    .europa h1{
+        font-size: 1.2rem;
+    }
+    .europa h4{
+        font-size: 1.1rem;
+    }
+
+    /* Asia */
+    .asia h1{
+        font-size: 1.2rem;
+    }
+    .asia h4{
+        font-size: 1.1rem;
+    }
+
+    /* Africa */
+    .africa h1{
+        font-size: 1.2rem;
+    }
+    .africa h4{
+    font-size: 1.1rem;
+    }
+
+    /* Oceania */
+    .oceania h1{
+        font-size: 1.2rem;
+    }
+    .oceania h4{
+    font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 731px) {
+    /* index  */
+    .piece{
+        display: none ;
+    }
+    /* Footer - Secciones */
+    .end{
+        position: fixed;
+        top: 50%;
+    }
+    /* About us */
+    .circle{
+        z-index: -1;
+    }
+}
+
+@media (max-width: 991px) {
+    /* Header - Secciones*/
+    .navbar-brand{
+        margin:auto;
+        display: block;
+    }
+    .nav-link{
+        display: block;
+        text-align: center;
+    }
+}
+
+@media (max-width: 799px) {
+    /* About us */
+    .circle{
+        background-color: #dc354580;    
+        z-index: -1;
+    }
+    .circle::before{
+        display: none;
+    }
+    .circle::after{
+        display: none;
+    }
+    /* Continentes */
+    .arg img{
+        width: 17rem;
+        height: 10rem;
+    }
+    .eur img{
+        width: 17rem;
+        height: 10rem;
+    }
+    .asi img{
+        width: 17rem;
+        height: 10rem;
+    }
+    .afr img{
+        width: 17rem;
+        height: 10rem;
+    }
+    .oce img{
+        width: 17rem;
+        height: 10rem;
+    }
+}
